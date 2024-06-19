@@ -1,0 +1,24 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject2",
+    "pageId": "Movies",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Movies_JSObject2",
+  "deleted": false,
+  "gitSyncId": "6614a5a7f9f2083ab68dc31f_188f4f55-afdb-4801-885d-aedd9cddafdc"
+}

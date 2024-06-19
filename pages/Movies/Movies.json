@@ -1,0 +1,88 @@
+{
+  "unpublishedPage": {
+    "name": "Movies",
+    "slug": "movies",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1174,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 880,
+          "containerStyle": "none",
+          "snapRows": 125,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 89,
+          "minHeight": 900,
+          "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
+          "dynamicBindingPathList": [],
+          "leftColumn": 0
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Movies_FindQuery",
+              "name": "FindQuery",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "data_table.sortOrder.column || 'genres'",
+                "key_select.selectedOptionValue",
+                "data_table.sortOrder.order == \"desc\" ? -1 : 1",
+                "data_table.pageSize",
+                "data_table.searchText||\"\"",
+                "(data_table.pageNo - 1) * data_table.pageSize",
+                "order_select.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Movies_Select_public_users1",
+              "name": "Select_public_users1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Table1.searchText",
+                "Table1.sortOrder.order !== \"desc\" ? \"\" : \"DESC\"",
+                "Table1.sortOrder.column || 'id'",
+                "Table1.pageSize",
+                "Table1.pageOffset"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Movies_Total_record_public_users1",
+              "name": "Total_record_public_users1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Table1.searchText"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Movies",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": []
+  },
+  "deleted": false,
+  "gitSyncId": "6614a5a7f9f2083ab68dc31f_383261fb-0881-41cc-b3e0-dee815b7aa1a"
+}
